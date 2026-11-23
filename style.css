@@ -1,6 +1,6 @@
 :root{
-  --cream:#f1efe8; --ink:#171715; --olive:#1c1f0a; --olive-2:#262a10;
-  --lime:#d6f26b; --lime-2:#c5e44f; --white:#fff; --muted:#6c6c64;
+  --cream:#eef5f6; --ink:#0f1f2a; --olive:#0b2a35; --olive-2:#12394a;
+  --lime:#9fe6d9; --lime-2:#80d6c6; --white:#fff; --muted:#5b7380;
   --r:28px; --ease:cubic-bezier(.2,.7,.2,1);
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -27,14 +27,14 @@ h2{font-size:clamp(2rem,4.6vw,4rem)}
 .submit b{background:var(--lime);color:var(--ink)}
 
 .eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.8rem;text-transform:uppercase;letter-spacing:.14em;font-weight:600}
-.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 0 rgba(214,242,107,.7);animation:pulse 2s infinite}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 0 rgba(159,230,217,.7);animation:pulse 2s infinite}
 .eyebrow.dark i{background:var(--olive)}
 .eyebrow.light{color:#fff}
-@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(214,242,107,0)}100%{box-shadow:0 0 0 0 rgba(214,242,107,0)}}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(159,230,217,0)}100%{box-shadow:0 0 0 0 rgba(159,230,217,0)}}
 
 /* nav */
-.nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:50;width:min(1180px,calc(100% - 32px));display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.6rem .6rem .6rem 1.2rem;border-radius:999px;background:rgba(241,239,232,.12);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.18);color:#fff;transition:background .4s,color .4s,top .4s}
-.nav.solid{background:rgba(241,239,232,.88);color:var(--ink);border-color:rgba(0,0,0,.06);box-shadow:0 8px 30px rgba(0,0,0,.08)}
+.nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:50;width:min(1180px,calc(100% - 32px));display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.6rem .6rem .6rem 1.2rem;border-radius:999px;background:rgba(238,245,246,.12);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.18);color:#fff;transition:background .4s,color .4s,top .4s}
+.nav.solid{background:rgba(238,245,246,.88);color:var(--ink);border-color:rgba(0,0,0,.06);box-shadow:0 8px 30px rgba(0,0,0,.08)}
 .brand{display:flex;align-items:center;gap:.6rem;font-weight:700;letter-spacing:-.02em}
 .brand em{font-style:normal;font-weight:400;opacity:.75}
 .brand-mark{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--lime);color:var(--ink);font-weight:800}
@@ -52,10 +52,10 @@ h2{font-size:clamp(2rem,4.6vw,4rem)}
 .mobile-menu .btn{font-size:1rem;align-self:flex-start}
 
 /* hero */
-.hero{position:relative;min-height:100svh;color:#fff;display:grid;grid-template-columns:1fr auto;align-items:end;padding:8rem clamp(1.2rem,4vw,3.5rem) 3.5rem;gap:2rem;overflow:hidden;background:#120f0e}
+.hero{position:relative;min-height:100svh;color:#fff;display:grid;grid-template-columns:1fr auto;align-items:end;padding:8rem clamp(1.2rem,4vw,3.5rem) 3.5rem;gap:2rem;overflow:hidden;background:#06161e}
 .hero-media{position:absolute;inset:0}
 .hero-media video{width:100%;height:100%;object-fit:cover;transform:scale(1.05);filter:brightness(.82) contrast(1.08) saturate(1.05)}
-.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,10,8,.8) 0%,rgba(18,10,8,.35) 50%,rgba(18,10,8,0) 80%),linear-gradient(0deg,rgba(18,10,8,.7),transparent 40%),linear-gradient(180deg,rgba(18,10,8,.45),transparent 22%)}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,22,30,.8) 0%,rgba(6,22,30,.35) 50%,rgba(6,22,30,0) 80%),linear-gradient(0deg,rgba(6,22,30,.7),transparent 40%),linear-gradient(180deg,rgba(6,22,30,.45),transparent 22%)}
 .hero>*:not(.hero-media){position:relative;z-index:2}
 .hero-stats{list-style:none;position:absolute!important;left:clamp(1.2rem,4vw,3.5rem);top:50%;transform:translateY(-62%);display:grid;gap:1.8rem}
 .hero-stats strong{display:block;font-size:2rem;font-weight:600;letter-spacing:-.03em}
@@ -96,7 +96,7 @@ h2{font-size:clamp(2rem,4.6vw,4rem)}
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
 .card{background:var(--olive-2);border:1px solid rgba(255,255,255,.07);border-radius:var(--r);padding:1.6rem;min-height:300px;display:flex;flex-direction:column;transition:transform .5s var(--ease),background .4s,border-color .4s;position:relative;overflow:hidden}
 .card::before{content:"";position:absolute;inset:auto -30% -60% auto;width:240px;height:240px;border-radius:50%;background:var(--lime);opacity:0;filter:blur(70px);transition:opacity .5s}
-.card:hover{transform:translateY(-8px);border-color:rgba(214,242,107,.4)}
+.card:hover{transform:translateY(-8px);border-color:rgba(159,230,217,.4)}
 .card:hover::before{opacity:.28}
 .card .num{font-size:.8rem;color:var(--lime);font-weight:700;letter-spacing:.1em}
 .card h3{font-size:1.5rem;margin:auto 0 .8rem;padding-top:3rem}
@@ -151,7 +151,7 @@ h2{font-size:clamp(2rem,4.6vw,4rem)}
 .reviews{padding:4rem clamp(1.2rem,6vw,6rem) 8rem}
 .reviews h2{margin-bottom:3rem}
 .rev-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
-.rev-grid blockquote{background:#e7e5db;border-radius:var(--r);padding:2.2rem;display:flex;flex-direction:column;gap:1.4rem;transition:transform .5s var(--ease)}
+.rev-grid blockquote{background:#dcebee;border-radius:var(--r);padding:2.2rem;display:flex;flex-direction:column;gap:1.4rem;transition:transform .5s var(--ease)}
 .rev-grid blockquote:hover{transform:rotate(-.8deg) translateY(-6px)}
 .stars{color:#f08a1c;letter-spacing:.15em}
 .rev-grid p{font-size:clamp(1.3rem,2.2vw,1.9rem);letter-spacing:-.02em;font-weight:500;line-height:1.25}
@@ -187,7 +187,7 @@ h2{font-size:clamp(2rem,4.6vw,4rem)}
 
 /* footer */
 .footer{padding:12px}
-.foot-card{background:#1d1d1b;color:#fff;border-radius:40px;padding:3.5rem clamp(1.4rem,4vw,4rem) 2rem;display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:2rem}
+.foot-card{background:#0b2a35;color:#fff;border-radius:40px;padding:3.5rem clamp(1.4rem,4vw,4rem) 2rem;display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:2rem}
 .foot-brand h3{font-size:2rem;margin-bottom:1rem}
 .foot-brand p{opacity:.6;max-width:32ch;font-size:.92rem}
 .foot-brand .muted{margin-top:1rem;font-size:.78rem}
